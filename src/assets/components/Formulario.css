@@ -1,0 +1,102 @@
+.login-container {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1c1c1c;
+}
+
+.login-box {
+  background-color: #2a2a2a;
+  padding: 50px 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  width: 340px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: -30px;
+}
+
+.titulo {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.formulario input {
+  padding: 10px;
+  border: 1px solid #555;
+  border-radius: 4px;
+  background-color: #1f1f1f;
+  color: #eee;
+  font-size: 16px;
+}
+
+.formulario input::placeholder {
+  color: #888;
+}
+
+.formulario button {
+  padding: 10px;
+  background-color: #111;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.extra-links {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Esto alinea el contenido horizontalmente */
+  justify-content: center; /* Opcional si quieres centrar también verticalmente */
+  gap: 5px;
+  width: 100%;
+}
+
+.extra-links a {
+  text-align: center;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.extra-links a:hover {
+  color: #339dff;
+  text-decoration: underline;
+}
+
+
+.error-message {
+    color: red;
+    font-size: 24px;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px black;
+    animation: parpadeo 1s infinite;
+}
+
+@keyframes parpadeo {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
