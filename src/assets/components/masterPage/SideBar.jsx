@@ -17,7 +17,6 @@ import { NavLink } from 'react-router-dom';
 const Sidebar = () => {
   const perfil = localStorage.getItem('perfil');
 
-  // Mostrar HomePage si el perfil no es válido
   if (perfil !== '_SISTEMAS' && perfil !== '_ENCARGADO') {
     return <HomePage />;
   }
@@ -27,7 +26,6 @@ const Sidebar = () => {
       <h3 className="sidebar-title">MENÚ PRINCIPAL</h3>
       {perfil === '_SISTEMAS' ? (
         <>
-          <h4 className="sidebar-subtitle">Opciones del departamento de DIOSES</h4>
           <nav className="sidebar-nav">
             <NavLink to="/panel" className="sidebar-link">
               <Home size={18} />
@@ -72,7 +70,7 @@ const Sidebar = () => {
         </>
       ) : (
         <>
-          <h4 className="sidebar-subtitle">Opciones para ENCARGADO</h4>
+
           <nav className="sidebar-nav">
             <NavLink to="/panel" className="sidebar-link">
               <Home size={18} />

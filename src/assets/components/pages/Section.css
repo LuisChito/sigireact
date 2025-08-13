@@ -1,0 +1,12 @@
+.main-content {
+  display: block;
+  margin: 20px auto;
+  padding: 3%;
+  margin-left: 290px;
+}
+
+.section__content {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}

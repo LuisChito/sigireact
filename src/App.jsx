@@ -4,7 +4,8 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { Formulario } from './assets/components/formulario';
 import Home from './assets/components/Home';
 import HomePage from './assets/components/HomePage';
-import Panel from './assets/components/Panel'; // ✅
+import Panel from './assets/components/Panel'; //
+
 
 function App() {
   const [user, setUser] = useState(null);
@@ -30,6 +31,7 @@ function App() {
         
         <Route path="/panel" element={user ? <Panel /> : <Navigate to="/" />} />
         <Route path="/inicio" element={user ? <HomePage /> : <Navigate to="/" />} />
+        <Route path="/departamento" element={user ? <HomePage /> : <Navigate to="/" />} />
       </Routes>
     </BrowserRouter>
   );

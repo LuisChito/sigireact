@@ -29,7 +29,9 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header-left">
+        <a href="/panel">
         <img src={logo} alt="Logo SIGI" className="logo-sigi" />
+        </a>
       </div>
 
       <div className="header-right">
