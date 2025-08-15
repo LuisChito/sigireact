@@ -2,7 +2,6 @@ import './App.css';
 import { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { Formulario } from './assets/components/formulario';
-import Home from './assets/components/Home';
 import HomePage from './assets/components/HomePage';
 import Panel from './assets/components/Panel'; //
 

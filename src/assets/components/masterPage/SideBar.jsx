@@ -27,11 +27,6 @@ const Sidebar = () => {
             <span>Inicio</span>
           </NavLink>
 
-          <NavLink to="/departamento" className="sidebar-link">
-            <Tag size={18} />
-            <span>Opciones del departamento</span>
-          </NavLink>
-
           <NavLink to="/ingreso-insumos" className="sidebar-link">
             <Plus size={18} />
             <span>Ingreso de insumos</span>
