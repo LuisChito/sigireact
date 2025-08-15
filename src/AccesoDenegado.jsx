@@ -1,8 +1,8 @@
-import React from 'react';
-import { AlertTriangle } from 'lucide-react'; 
-import Header from './masterPage/Header'
+import React from 'react'
+import  Header from './assets/components/masterPage/Header'
+import { AlertTriangle } from 'lucide-react';
 
-const HomePage = () => {
+const AccesoDenegado = () => {
   return (
     <>
     <Header/>
@@ -19,6 +19,6 @@ const HomePage = () => {
     </div>
     </>
   );
-};
+}
 
-export default HomePage;
+export default AccesoDenegado

@@ -30,7 +30,7 @@ function App() {
         )} />
         
         <Route path="/panel" element={user ? <Panel /> : <Navigate to="/" />} />
-        <Route path="/inicio" element={user ? <HomePage /> : <Navigate to="/" />} />
+        <Route path="/accesoDenegado" element={user ? <HomePage /> : <Navigate to="/" />} />
         <Route path="/departamento" element={user ? <HomePage /> : <Navigate to="/" />} />
       </Routes>
     </BrowserRouter>

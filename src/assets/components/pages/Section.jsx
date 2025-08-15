@@ -1,8 +1,9 @@
 import React from 'react';
-import './Section.css'
+import './Section.css';
 
 const Section = () => {
-  return (
+    return (
+      <>
     <div className="main-content">
       <div className="section__content">
         
@@ -29,7 +30,8 @@ const Section = () => {
         <p className="last-update">Última Actualización: 03/Jul/2025</p>
       </div>
     </div>
-  );
+    </>
+    );
 };
 
 export default Section;
