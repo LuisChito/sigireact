@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { Formulario } from './assets/components/formulario';
 import HomePage from './assets/components/HomePage';
 import Panel from './assets/components/Panel'; //
+import IngresoInsumos from './assets/components/pages/sistemas/IngresoInsumos';
 
 
 function App() {
@@ -30,7 +31,16 @@ function App() {
         
         <Route path="/panel" element={user ? <Panel /> : <Navigate to="/" />} />
         <Route path="/accesoDenegado" element={user ? <HomePage /> : <Navigate to="/" />} />
-        <Route path="/departamento" element={user ? <HomePage /> : <Navigate to="/" />} />
+        <Route
+        path="/IngresoInsumos"
+        element={
+          !user
+            ? <Navigate to="/" replace />
+            : localStorage.getItem('perfil') === '_SISTEMAS'
+              ? <IngresoInsumos />
+              : <Navigate to="/AccesoDenegado" replace />
+        }
+        />
       </Routes>
     </BrowserRouter>
   );
