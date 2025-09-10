@@ -1,0 +1,111 @@
+/* ====== Layout principal ====== */
+.captura-content{
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1fr;          /* móvil: una columna */
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-left: 200px;   
+}
+
+/* En escritorio: dos columnas lado a lado */
+@media (min-width: 992px){
+  .captura-content{
+    grid-template-columns: 1fr 1fr;
+    align-items: start;                 /* que las cards arranquen arriba */
+  }
+}
+
+/* Las tarjetas */
+.card{
+  background: #0f1115;                  /* ajusta a tu tema */
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 6px 24px rgba(0,0,0,.25);
+}
+
+/* Títulos */
+.titulo{ margin: 0 0 8px; }
+.subtitulo{ margin: 0 0 16px; }
+
+/* El bloque de acciones al final debe ocupar las 2 columnas */
+.acciones{
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  grid-column: 1 / -1;                  /* <- clave para abarcar ambas columnas */
+}
+
+/* ====== Formulario ====== */
+.form-grid{
+  display: grid;
+  gap: 14px;
+  grid-template-columns: 1fr 1fr;
+}
+.form-group{ display: flex; flex-direction: column; gap: 6px; }
+.form-group.full{ grid-column: 1 / -1; }
+
+select, input[type="number"]{
+  background: #0b0d11;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 10px;
+  padding: 10px 12px;
+  color: #e7e7e7;
+  outline: none;
+}
+select:disabled{ opacity: .6; cursor: not-allowed; }
+
+/* ====== Tabla Carrito ====== */
+.tabla{
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.tabla thead th{
+  text-align: left;
+  font-weight: 600;
+  padding: 10px 12px;
+  background: rgba(255,255,255,.05);
+}
+.tabla tbody td{
+  padding: 10px 12px;
+  border-top: 1px solid rgba(255,255,255,.06);
+}
+.tabla input[type="number"]{
+  width: 110px;                         /* evita que “empuje” la tabla */
+}
+
+/* ====== Botones ====== */
+.btn-add,
+.btn-primary,
+.btn-secondary,
+.btn-delete{
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: transform .06s ease, filter .2s ease;
+}
+.btn-add{ background: #1d824d; color: #fff; }
+.btn-primary{ background: #2563eb; color: #fff; }
+.btn-secondary{ background: #334155; color: #e7e7e7; }
+.btn-delete{ background: #b91c1c; color: #fff; }
+.btn-add:disabled{ opacity: .6; cursor: not-allowed; }
+.btn-add:hover:not(:disabled),
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-delete:hover{ filter: brightness(1.05); }
+.btn-add:active,
+.btn-primary:active,
+.btn-secondary:active,
+.btn-delete:active{ transform: translateY(1px); }
+
+/* Opcional: separa el título principal del grid */
+.captura-main .titulo{
+  grid-column: 1 / -1;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}

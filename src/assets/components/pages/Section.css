@@ -1,12 +1,29 @@
-.main-content {
+/* ======= SECTION PAGE ======= */
+.page--section .main-content {
   display: block;
-  margin: 20px auto;
-  padding: 3%;
-  margin-left: 290px;
+  margin-left: 290px;         /* espacio del sidebar */
+  padding: 24px;
+  background-color: #111;
+  color: #fff;
+   border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+
+  /* altura solo al contenido */
+  min-height: auto;
+  height: auto;
 }
 
-.section__content {
+.page--section .section__content {
   margin: 0;
   padding: 0;
+  max-width: 1200px;
   text-align: left;
+}
+
+.page--section .section__content h1,
+.page--section .section__content h3,
+.page--section .section__content h4,
+.page--section .section__content p {
+  text-align: left;
+  margin: 0 0 16px;
 }

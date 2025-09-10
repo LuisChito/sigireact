@@ -5,7 +5,7 @@ import { Formulario } from './assets/components/formulario';
 import HomePage from './assets/components/HomePage';
 import Panel from './assets/components/Panel'; //
 import IngresoInsumos from './assets/components/pages/sistemas/IngresoInsumos';
-
+import CapturaInsumos from './assets/components/pages/sistemas/CapturaInsumos';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -29,7 +29,7 @@ function App() {
           <Navigate to="/panel" />
         )} />
         
-        <Route path="/panel" element={user ? <Panel /> : <Navigate to="/" />} />
+        <Route path="/panel" element={user ? <Panel /> : <Navigate to="/" />} />      
         <Route path="/accesoDenegado" element={user ? <HomePage /> : <Navigate to="/" />} />
         <Route
         path="/IngresoInsumos"
@@ -38,6 +38,16 @@ function App() {
             ? <Navigate to="/" replace />
             : localStorage.getItem('perfil') === '_SISTEMAS'
               ? <IngresoInsumos />
+              : <Navigate to="/AccesoDenegado" replace />
+        }
+        />
+        <Route
+        path="/IngresoInsumos/captura"
+        element={
+          !user
+            ? <Navigate to="/" replace />
+            : localStorage.getItem('perfil') === '_SISTEMAS'
+              ? <CapturaInsumos />
               : <Navigate to="/AccesoDenegado" replace />
         }
         />
