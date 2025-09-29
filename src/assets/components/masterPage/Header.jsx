@@ -15,15 +15,10 @@ const Header = () => {
   };
 
   const handleLogout = () => {
-  localStorage.removeItem('usuario');
-  localStorage.removeItem('perfil');
-  window.location.href = '/';
-  };
-
-
-  const cambiarTema = () => {
-    document.body.classList.toggle('dark-theme');
-    setTemaOscuro(!temaOscuro);
+    localStorage.removeItem('usuario');
+    localStorage.removeItem('perfil');
+    localStorage.removeItem('numtda');
+    window.location.href = '/';
   };
 
   return (

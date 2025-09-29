@@ -3,7 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const authRoutes = require('./routes/auth');
 const insumosRoutes =  require('./routes/insumos')
-
+const inventarioSucursales = require('./routes/inventario/sucursales');
 console.log('Servidor SQL:', process.env.DB_SERVER);
 
 const app = express();
@@ -13,6 +13,7 @@ app.use(express.json());
 // Rutas
 app.use('/api', authRoutes);
 app.use('/api', insumosRoutes);
+app.use('/api', inventarioSucursales);
 
 // Puerto
 const PORT = process.env.PORT || 3001;

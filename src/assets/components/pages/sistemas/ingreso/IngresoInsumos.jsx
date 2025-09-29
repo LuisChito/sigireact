@@ -1,8 +1,9 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import Header from '../../masterPage/Header';
-import SideBar from '../../masterPage/SideBar';
+import Header from '../../../masterPage/Header';
+import SideBar from '../../../masterPage/SideBar';
 import './IngresoInsumos.css';
+import { Link } from 'react-router-dom';
 
 const IngresoInsumos = () => {
   const navigate = useNavigate();

@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   Home,
-  Tag,
   Plus,
   Truck,
   RotateCcw,
@@ -64,14 +63,14 @@ const Sidebar = () => {
             <span>Inicio</span>
           </NavLink>
 
-          <NavLink to="/solicitud-insumos" className="sidebar-link">
+          <NavLink to="/SolicitudInsumos" className="sidebar-link">
             <ClipboardList size={18} />
             <span>Solicitud Insumos</span>
           </NavLink>
 
-          <NavLink to="/inventario-sucursales" className="sidebar-link">
+          <NavLink to="/Inventario" className="sidebar-link">
             <Building size={18} />
-            <span>Ver Inventario</span>
+            <span>Inventario</span>
           </NavLink>
 
           <NavLink to="/usuarios-asignados" className="sidebar-link">

@@ -25,18 +25,21 @@ export function Formulario({ setUser }) {
       });
 
       const data = await response.json();
+
       if (data.success) {
-  setUser(data.usuario);
-  localStorage.setItem('usuario', data.usuario);
+        setUser(data.usuario);
+        localStorage.setItem('usuario', data.usuario);
 
-      if (data.perfil) {
-        localStorage.setItem('perfil', data.perfil);
-      }
-      navigate('/inicio');
-      }
+        if (data.perfil) {
+          localStorage.setItem('perfil', data.perfil);
+        }
 
-      
-      else {
+        if (data.numtda) {
+          localStorage.setItem('numtda', data.numtda);
+        }
+        
+        navigate('/inicio');
+      } else {
         setError('Usuario o contraseña incorrectos');
       }
     } catch (err) {

@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from "react";
-import Sidebar from "../../masterPage/SideBar";
-import Header from "../../masterPage/Header";
+import Sidebar from "../../../masterPage/SideBar";
+import Header from "../../../masterPage/Header";
 import "./CapturaInsumos.css";
 
 const INSUMOS_DATA = [
